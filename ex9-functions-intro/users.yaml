@@ -1,0 +1,5 @@
+users:
+- name: Ilya
+  group: admin
+- name: John
+  group: user
