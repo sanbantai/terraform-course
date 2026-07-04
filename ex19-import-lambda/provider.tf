@@ -11,9 +11,20 @@ terraform {
       source  = "hashicorp/random"
       version = "~> 3.5.0"
     }
+
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.8.0"
+    }
   }
 }
 
 provider "aws" {
   region = "eu-central-1"
+  default_tags {
+    tags = {
+      ManagedBy = "Terraform"
+      Project   = "ex19-import-lambda"
+    }
+  }
 }
