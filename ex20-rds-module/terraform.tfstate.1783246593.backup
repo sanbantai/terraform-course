@@ -1,0 +1,241 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.7",
+  "serial": 10,
+  "lineage": "84a85544-337d-0f2e-dcde-8c5e85fc369b",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "allowed",
+      "provider": "module.rds.provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-central-1:998461587073:subnet/subnet-0d1818a706fceca1b",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-central-1c",
+            "availability_zone_id": "euc1-az1",
+            "cidr_block": "10.0.0.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0d1818a706fceca1b",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "998461587073",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "eu-central-1",
+            "tags": {
+              "Name": "ex20-rds-module-allowed-subnet"
+            },
+            "tags_all": {
+              "Name": "ex20-rds-module-allowed-subnet"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0d99d7b78ffa1a1d5"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "998461587073",
+            "id": "subnet-0d1818a706fceca1b",
+            "region": "eu-central-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "custom",
+      "provider": "module.rds.provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-central-1:998461587073:vpc/vpc-0d99d7b78ffa1a1d5",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "10.0.0.0/16",
+            "default_network_acl_id": "acl-0bf2400b3ccb149d5",
+            "default_route_table_id": "rtb-03f0b7463941ff9b6",
+            "default_security_group_id": "sg-04048256b5b59fab5",
+            "dhcp_options_id": "dopt-0cd29bc8fc646bbe2",
+            "enable_dns_hostnames": false,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "id": "vpc-0d99d7b78ffa1a1d5",
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_network_border_group": "",
+            "ipv6_ipam_pool_id": "",
+            "ipv6_netmask_length": 0,
+            "main_route_table_id": "rtb-03f0b7463941ff9b6",
+            "owner_id": "998461587073",
+            "region": "eu-central-1",
+            "tags": {
+              "Name": "ex20-rds-module-custom-vpc"
+            },
+            "tags_all": {
+              "Name": "ex20-rds-module-custom-vpc"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "998461587073",
+            "id": "vpc-0d99d7b78ffa1a1d5",
+            "region": "eu-central-1"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "module": "module.rds",
+      "mode": "data",
+      "type": "aws_vpc",
+      "name": "default",
+      "provider": "module.rds.provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-central-1:998461587073:vpc/vpc-0828fa1e41e050958",
+            "cidr_block": "172.31.0.0/16",
+            "cidr_block_associations": [
+              {
+                "association_id": "vpc-cidr-assoc-0604c63a29210d4cb",
+                "cidr_block": "172.31.0.0/16",
+                "state": "associated"
+              }
+            ],
+            "default": true,
+            "dhcp_options_id": "dopt-0cd29bc8fc646bbe2",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "filter": null,
+            "id": "vpc-0828fa1e41e050958",
+            "instance_tenancy": "default",
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "main_route_table_id": "rtb-099027013f2db5183",
+            "owner_id": "998461587073",
+            "region": "eu-central-1",
+            "state": null,
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.rds",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "not_allowed",
+      "provider": "module.rds.provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:eu-central-1:998461587073:subnet/subnet-0d827fb4bf66f008a",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-central-1c",
+            "availability_zone_id": "euc1-az1",
+            "cidr_block": "172.31.128.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0d827fb4bf66f008a",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "998461587073",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "eu-central-1",
+            "tags": {
+              "Name": "ex20-rds-module-not-allowed-subnet"
+            },
+            "tags_all": {
+              "Name": "ex20-rds-module-not-allowed-subnet"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-0828fa1e41e050958"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "998461587073",
+            "id": "subnet-0d827fb4bf66f008a",
+            "region": "eu-central-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.rds.data.aws_vpc.default"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": [
+    {
+      "object_kind": "var",
+      "config_addr": "module.rds.var.engine",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.rds.var.credentials",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "resource",
+      "config_addr": "module.rds.data.aws_subnet.input",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.rds.var.instance_class",
+      "status": "unknown",
+      "objects": null
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.rds.var.storage_size",
+      "status": "unknown",
+      "objects": null
+    }
+  ]
+}
